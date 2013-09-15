@@ -22,19 +22,19 @@ public class WeixinMessage implements Serializable {
 	private static final long serialVersionUID = -8039373649516695373L;
 
 	/** text type */
-	public static final String TYPE_TEXT = "<![CDATA[text]]>";
+	public static final String TYPE_TEXT = "text";
 	
 	/** image type */
-	public static final String TYPE_IMG = "<![CDATA[image]]>";
+	public static final String TYPE_IMG = "image";
 	
 	/** address message */
-	public static final String TYPE_ADDRESS = "<![CDATA[location]]>";
+	public static final String TYPE_ADDRESS = "location";
 	
 	/** a link message */
-	public static final String TYPE_LINK = "<![CDATA[link]]>";
+	public static final String TYPE_LINK = "link";
 	
 	/** event message */
-	public static final String TYPE_EVENT = "<![CDATA[event]]>";
+	public static final String TYPE_EVENT = "event";
 	
 	@XmlElement(name = "ToUserName")
 	public String ToUserName;
@@ -50,6 +50,21 @@ public class WeixinMessage implements Serializable {
 
 	@XmlElement(name = "Content")
 	public String Content;
+
+	@XmlElement(name = "PicUrl")
+	public String PicUrl;
+
+	@XmlElement(name = "Title")
+	public String Title;
+
+	@XmlElement(name = "Description")
+	public String Description;
+
+	@XmlElement(name = "Url")
+	public String Url;
+	
+	@XmlElement(name = "EventKey")
+	public String EventKey;
 
 	@XmlElement(name = "MsgId")
 	public Long MsgId;
